@@ -1,1 +1,2 @@
 include(":cryptocurrencychallenge")
+include(":domain")
