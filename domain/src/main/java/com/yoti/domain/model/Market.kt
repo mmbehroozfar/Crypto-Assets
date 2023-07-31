@@ -5,6 +5,6 @@ data class Market(
     val exchangeId: String,
     val price: String,
     val rank: String,
-    val volume24Hours: String,
+    val volume24Hours: String?,
     val updated: Long,
 )

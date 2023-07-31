@@ -15,7 +15,7 @@ class GetHighestMarketInformation24HrUseCase @Inject constructor(
         return repository.getMarketInformation(parameter)
             .map { markets ->
                 markets.maxByOrNull {
-                    it.volume24Hours.toDouble()
+                    it.volume24Hours?.toDoubleOrNull() ?: 0.0
                 }
             }
     }
