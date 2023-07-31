@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="internet_connection_is_unavailable">Internet connection is unavailable!</string>
+    <string name="it_s_not_you_it_s_us">It\'s not you, It\'s us!</string>
+    <string name="we_have_some_connection_issues">We have some connection issues!</string>
+    <string name="something_went_wrong">Something went wrong!</string>
+    <string name="symbol">Symbol: %s</string>
+    <string name="exchange_id">Exchange ID: %s</string>
+    <string name="rank">Rank: %s</string>
+    <string name="price">Price: %s</string>
+    <string name="updated_at">Updated at: %s</string>
+</resources>

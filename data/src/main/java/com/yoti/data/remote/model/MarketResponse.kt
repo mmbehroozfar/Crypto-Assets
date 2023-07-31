@@ -16,7 +16,7 @@ data class MarketResponse(
     @SerialName("priceQuote")
     val priceQuote: String,
     @SerialName("priceUsd")
-    val priceUsd: String,
+    val priceUsd: String? = null,
     @SerialName("quoteId")
     val quoteId: String,
     @SerialName("quoteSymbol")

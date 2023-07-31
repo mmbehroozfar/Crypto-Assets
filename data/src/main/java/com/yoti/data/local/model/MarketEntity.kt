@@ -25,7 +25,7 @@ data class MarketEntity(
     @ColumnInfo("price_quote")
     val priceQuote: String,
     @ColumnInfo("price_usd")
-    val priceUsd: String,
+    val priceUsd: String?,
     @ColumnInfo("quote_id")
     val quoteId: String,
     @ColumnInfo("quote_symbol")

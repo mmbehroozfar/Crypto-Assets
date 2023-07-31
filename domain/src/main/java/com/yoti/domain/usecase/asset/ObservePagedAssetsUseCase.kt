@@ -17,9 +17,7 @@ class ObservePagedAssetsUseCase @Inject constructor(
 
     private val pagingConfig = PagingConfig(
         pageSize = 15,
-        prefetchDistance = 3,
         enablePlaceholders = false,
-        initialLoadSize = 20,
     )
 
     override suspend fun createObservable(params: Unit): Flow<PagingData<Asset>> {
