@@ -12,11 +12,11 @@ import com.yoti.ui.asset.mapper.ErrorMapper
 import com.yoti.ui.asset.model.AssetUi
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
+import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 
 @HiltViewModel
@@ -33,8 +33,8 @@ class AssetListViewModel @Inject constructor(
     private val _isLoading = MutableStateFlow(true)
     val isLoading: StateFlow<Boolean> get() = _isLoading
 
-    private val _showError = MutableSharedFlow<Int>(replay = 0)
-    val showError: SharedFlow<Int> get() = _showError
+    private val _showError = Channel<Int>(Channel.BUFFERED)
+    val showError: Flow<Int> get() = _showError.receiveAsFlow()
 
     init {
         observePagedAssetsUseCase(Unit)
@@ -46,7 +46,7 @@ class AssetListViewModel @Inject constructor(
             _isLoading.emit(true)
             updateAssetsUseCase(Unit).let {
                 it.onError { exception ->
-                    _showError.emit(errorMapper(exception))
+                    _showError.send(errorMapper(exception))
                 }
                 _isLoading.emit(false)
             }
