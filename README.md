@@ -1,6 +1,6 @@
-# Photos
+# Crypto Assets
 
-<img src="https://github.com/mmbehroozfar/Crypto-Assets/raw/master/img/preview.gif?raw=true" alt="Logo" align="right" height="600">
+<img src="https://github.com/mmbehroozfar/Crypto-Assets/blob/master/img/preview.gif?raw=true" alt="Logo" align="right" height="600">
 
 This app allows users to see Crypto assets. It provides the following features:
 
