@@ -97,6 +97,7 @@ obj/
 .idea/jarRepositories.xml
 .idea/navEditor.xml
 .idea/kotlinc.xml
+.idea/androidTestResultsUserPreferences.xml
 
 # OS-specific files
 .DS_Store

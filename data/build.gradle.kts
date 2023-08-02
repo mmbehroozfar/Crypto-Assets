@@ -60,4 +60,8 @@ dependencies {
     implementation("androidx.room:room-ktx:2.5.2")
     implementation("androidx.room:room-paging:2.5.2")
     kapt("androidx.room:room-compiler:2.5.2")
+
+    androidTestImplementation("com.google.dagger:hilt-android-testing:2.47")
+    kaptAndroidTest("com.google.dagger:hilt-compiler:2.47")
+    androidTestImplementation("com.squareup.okhttp3:mockwebserver:4.11.0")
 }

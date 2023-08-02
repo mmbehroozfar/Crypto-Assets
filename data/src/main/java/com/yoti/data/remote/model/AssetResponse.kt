@@ -6,7 +6,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class AssetResponse(
     @SerialName("changePercent24Hr")
-    val changePercent24Hr: String,
+    val changePercent24Hr: String? = null,
     @SerialName("id")
     val id: String,
     @SerialName("marketCapUsd")
@@ -26,5 +26,5 @@ data class AssetResponse(
     @SerialName("volumeUsd24Hr")
     val volumeUsd24Hr: String,
     @SerialName("vwap24Hr")
-    val vwap24Hr: String,
+    val vwap24Hr: String? = null,
 )

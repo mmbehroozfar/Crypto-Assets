@@ -16,7 +16,9 @@ import retrofit2.Retrofit
 
 @Module
 @InstallIn(SingletonComponent::class)
-internal object NetworkModule {
+open class NetworkModule {
+
+    protected open fun baseUrl() = "https://api.coincap.io/"
 
     @Provides
     @Singleton
@@ -38,7 +40,7 @@ internal object NetworkModule {
         client: OkHttpClient,
         converterFactory: Converter.Factory,
     ): Retrofit = Retrofit.Builder()
-        .baseUrl("https://api.coincap.io/")
+        .baseUrl(baseUrl())
         .addConverterFactory(converterFactory)
         .client(client)
         .build()
