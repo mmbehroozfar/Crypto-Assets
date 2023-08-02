@@ -1,35 +1,70 @@
-# Introduction
-Welcome to Yoti's code challenge project. This repository contains an Android application with some basic functionality
-to support the development of the code test required during the hiring process for an Android developer in Yoti.
+# Photos
 
-# The challenge
-A candidate have to add the required code in this project to implement the following feature:
+<img src="https://github.com/mmbehroozfar/Crypto-Assets/raw/master/img/preview.gif?raw=true" alt="Logo" align="right" height="600">
 
-- When the user open the app, we need to display a list of crypto currency assets (see CoincapService and AssetsApiData),
-  displaying the asset name and symbol.
+This app allows users to see Crypto assets. It provides the following features:
 
-- When the user tap on an asset, we navigate to a new Fragment where we need to display detailed view of one Market (see CoincapService and MarketsApiData) 
-  that has the selected crypto currency as the "baseId", and has the highest volume transacted in the last 24 hours ("volumeUsd24Hr").
-  The information to display in this view is:
-  + Exchange ID
-  + Rank
-  + Price
-  + Updated date with the format "Day/Month/Year"
+- Show a list of assets
+- Show exchange detail of asset
 
-# Guideline
-The candidate is free to implement the solution in any way that consider appropriated but bear in mind that we 
-in Yoti love well designed, clear and simple code. SOLID principles and Clean Architecture are fundamental concepts in our development philosophy.
+# Android development
 
-Below some points and tips that we evaluate:
-- The functionality needs to be testable, and adding different types of tests as the candidate consider appropriated is not only a very positive bonus but almost a requirement. The absence of tests can be a very strong factor to fail this exercise.
-- The presentation layer can be implemented following any of the industry well known patterns: MVVM, MVP, etc. 
-  Although is not mandatory, using one of these paradigms is a positive point in the evaluation.
-- Use any third party library not included in the project if needed.
-- The webserver API used in this exercise can frequently return errors when many requests (sometimes just a few) are performed from the same IP address. Take this into account as part of the exercise to treat errors properly.
+I used the most latest technologies for developing this application.
 
-# How to submit the code challenge to Yoti
-- The candidate can checkout the project locally and push to a newly created repo with public permissions so we can access it (please DO NOT use Fork button from github). Alternatively, you can clone the project and send the recruiter the updated project in a zip file.
- 
-# Reference links
-- Coincap API: https://docs.coincap.io/
+Here is a list of technologies and tools that are used in this project.
+
+- Kotlin: The app is written entirely in Kotlin, a modern and expressive programming language for
+  Android development.
+- Kotlin Coroutines: Coroutines are used throughout the app for efficient and asynchronous handling
+  of tasks.
+- Clean MVVM Architecture: The app follows the Clean MVVM architecture pattern, which separates
+  concerns and improves maintainability.
+- Architecture Components: The app uses various components from the Android Architecture Components
+  library, such as Room, Lifecycle, Navigation, and ViewModel.
+- Hilt for Dependency Injection: Hilt is used for dependency injection, making the app modular and
+  easier to manage.
+- Gradle Kotlin DSL: The project uses Gradle Kotlin DSL for build configuration, which provides a
+  more concise and powerful way to configure the build.
+- Unit Testing: Some classes in the app are unit tested using the Mockk library for mocking
+  dependencies.
+- Ui Testing: Two main Fragments are tested using Espresso.
+
+# Solution
+
+1- Design:
+
+The UI design of the app is kept simple and minimalistic, focusing on usability and functionality.
+
+2- Clean MVVM Architecture:
+
+The app follows the Clean MVVM architecture pattern, separating the app's concerns into different
+layers, such as presentation, domain, and data. This architecture promotes maintainability,
+testability, and scalability.
+
+3- Testing:
+
+The app's critical functionalities and modules are unit tested to ensure their functionality and
+reliability. The tests are written using the Mockk library, which provides a flexible and powerful
+mocking framework for Kotlin.
+
+4- Git History:
+
+Due to limited time, the best practices for git history, such as using git-flow for feature and
+bugfix branches, were not followed. Only one branch was used, which is not recommended in a
+production environment.
+
+5- Overall:
+
+The app uses the best architecture and tools to implement the project, with a clean and simple
+codebase following the required guidelines. It provides a seamless and delightful user experience,
+with its offline-first approach, efficient and asynchronous handling of tasks, and concise and
+maintainable codebase.
+
+# Improvement
+
+1- Design: I think the user interface of the app needs improvement to increase user satisfaction.
+
+2- Test: More tests are needed to insure all different parts of the app are working as intended.
+
+3- Modularization: More modules are needed to separate different layers like Cache and Remote.
 
